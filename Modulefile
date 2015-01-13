@@ -1,0 +1,10 @@
+name          'evenup-cronie'
+version       '0.1.0'
+source        'https://github.com/evenup/evenup-cronie'
+author        'Justin Lambert <jlambert@letsevenup.com>'
+license       'Apache 2.0'
+summary       'Manages the RHEL cronie package and service'
+description   ''
+project_page  'https://github.com/evenup/evenup-cronie'
+
+dependency 'puppetlabs/stdlib'
