@@ -7,7 +7,6 @@
 2. [Module Description - What the module does and why it is useful](#module-description)
 3. [Setup - The basics of getting started with cronie](#setup)
     * [What cronie affects](#what-cronie-affects)
-    * [Setup requirements](#setup-requirements)
     * [Beginning with cronie](#beginning-with-cronie)
 4. [Usage - Configuration options and additional functionality](#usage)
 5. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
@@ -17,43 +16,43 @@
 
 ## Overview
 
-A one-maybe-two sentence summary of what the module does/what problem it solves. This is your 30 second elevator pitch for your module. Consider including OS/Puppet version it works with.       
+Puppet module managing RedHat's cronie package and service.
 
 ## Module Description
 
-If applicable, this section should have a brief description of the technology the module integrates with and what that integration enables. This section should answer the questions: "What does this module *do*?" and "Why would I use it?"
+An extremely simple module managing the cronie puppet and service classes mainly intended to:
 
-If your module has a range of functionality (installation, configuration, management, etc.) this is the time to mention it.
+* allow easy upgrading of the chronie package
+* allow an easy method for restarting the chrond service when the timezone changes
 
 ## Setup
 
 ### What cronie affects
 
-* A list of files, packages, services, or operations that the module will alter, impact, or execute on the system it's installed on.
-* This is a great place to stick any warnings.
-* Can be in list or paragraph form. 
-
-### Setup Requirements **OPTIONAL**
-
-If your module requires anything extra before setting up (pluginsync enabled, etc.), mention it here. 
+* cronie package
+* cronie service
 
 ### Beginning with cronie
 
-The very basic steps needed for a user to get the module up and running. 
+Install the module:
 
-If your most recent release breaks compatibility or requires particular steps for upgrading, you may wish to include an additional section here: Upgrading (For an example, see http://forge.puppetlabs.com/puppetlabs/firewall).
+```
+    puppet module install evenup-cronie
+```
 
 ## Usage
 
-Put the classes, types, and resources for customizing, configuring, and doing the fancy stuff with your module here. 
+```puppet
+    class { 'cronie': }
+```
 
 ## Reference
 
-Here, list the classes, types, providers, facts, etc contained in your module. This section should include all of the under-the-hood workings of your module so people know what the module is touching on their system but don't need to mess with things. (We are working on automating this section!)
+Nothing to configure
 
 ## Limitations
 
-This is where you list OS compatibility, version compatibility, etc.
+Only works on RedHat-based systems.
 
 ## Development
 
@@ -63,5 +62,6 @@ information on adding and validating tests for PRs.
 ## Changelog / Contributors
 
 [Changelog](https://github.com/evenup/evenup-cronie/blob/master/CHANGELOG)
+
 [Contributors](https://github.com/evenup/cronie/graphs/contributors)
 
