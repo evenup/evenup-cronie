@@ -5,9 +5,9 @@ describe 'cronie' do
     describe "cronie class without any parameters on RedHat" do
       let(:facts) { { :osfamily => 'RedHat' } }
 
-      it { should compile.with_all_deps }
-
+      it { should create_class('cronie') }
       it { should contain_class('cronie::params') }
+      it { should contain_class('cronie::install') }
       it { should contain_class('cronie::service').that_subscribes_to('cronie::install') }
 
       it { should contain_package('cronie').with(:ensure =>'latest') }

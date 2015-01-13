@@ -1,0 +1,8 @@
+---
+  .travis.yml:
+    hc_secure: "Q7BAeHTbqsUID1jN+fY/awZ19n/+1Kk4as8yn+Pw5oeXhIBb2ZnD8tMEiAiCDPFT/DJnsvxpIJNZl7kSc4SsUUCDEU9zcSc00++ppATyj4pMcJiuDnsP/pJ4D/IHotVfQ5njoAV1gxixmWJocUfN9F84nCg6KLdA43jRgQRD3iY="
+  spec/acceptance/nodesets/ubuntu-server-1204-x64.yml:
+    delete: true
+  spec/acceptance/nodesets/ubuntu-server-1404-x64.yml:
+    delete: true
+
