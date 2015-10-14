@@ -8,8 +8,9 @@
 #   Explanation of what this parameter affects and what it defaults to.
 #
 class cronie (
-  $package_name = $::cronie::params::package_name,
-  $service_name = $::cronie::params::service_name,
+  $package_name   = $::cronie::params::package_name,
+  $package_ensure = $::cronie::params::package_ensure,
+  $service_name   = $::cronie::params::service_name,
 ) inherits ::cronie::params {
 
   class { '::cronie::install': } ~>

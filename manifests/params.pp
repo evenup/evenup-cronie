@@ -6,8 +6,9 @@
 class cronie::params {
   case $::osfamily {
     'RedHat', 'Amazon': {
-      $package_name = 'cronie'
-      $service_name = 'crond'
+      $package_name   = 'cronie'
+      $package_ensure = 'latest'
+      $service_name   = 'crond'
     }
     default: {
       fail("${::operatingsystem} not supported")

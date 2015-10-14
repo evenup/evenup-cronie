@@ -5,6 +5,6 @@
 class cronie::install {
 
   package { $::cronie::package_name:
-    ensure => latest,
+    ensure => $::cronie::package_ensure,
   }
 }
