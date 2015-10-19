@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe 'cronie' do
   context 'supported operating systems' do
-    describe "cronie class without any parameters on RedHat" do
-      let(:facts) { { :osfamily => 'RedHat' } }
+    let(:facts) { { :osfamily => 'RedHat' } }
 
+    describe "cronie class without any parameters on RedHat" do
       it { should create_class('cronie') }
       it { should contain_class('cronie::params') }
       it { should contain_class('cronie::install') }
@@ -12,6 +12,10 @@ describe 'cronie' do
 
       it { should contain_package('cronie').with(:ensure =>'latest') }
       it { should contain_service('crond') }
+    end
+    describe "cronie class with custom ensure parameter" do
+      let(:params) { { :package_ensure => 'installed' } }
+      it { should contain_package('cronie').with(:ensure => 'installed') }
     end
   end
 

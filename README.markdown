@@ -22,8 +22,8 @@ Puppet module managing RedHat's cronie package and service.
 
 An extremely simple module managing the cronie puppet and service classes mainly intended to:
 
-* allow easy upgrading of the chronie package
-* allow an easy method for restarting the chrond service when the timezone changes
+* allow easy upgrading of the cronie package
+* allow an easy method for restarting the crond service when the timezone changes
 
 ## Setup
 
